@@ -3,7 +3,7 @@ import sys
 
 if __name__ == "__main__":
     argv = sys.argv
-    print(len(argv) - 1, "arguments", end='')
+    print(len(argv) - 1, "argument" + ("s" if len(argv) > 2 else ""), end='')
     if len(argv) == 1:
         print(".", end='')
     else:
