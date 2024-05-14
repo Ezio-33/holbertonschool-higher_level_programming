@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-    # =() après chaque paramètre indiquent que si aucun
-    # tuple n'est fourni lors de l'appel de la fonction,
-    # un tuple vide sera utilisé par défaut.
 def add_tuple(tuple_a=(), tuple_b=()):
 
     # Remplir les tuples avec des zéros s'ils sont vide
