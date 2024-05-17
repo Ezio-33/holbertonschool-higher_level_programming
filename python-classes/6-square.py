@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Initialise la classe Square avec une taille et une position données en paramètres.
+Initialise la classe Square avec une taille
+et une position données en paramètres.
 """
 
 
@@ -10,7 +11,8 @@ class Square:
     """
     def __init__(self, size=0, position=(0, 0)):
         """
-        Initialise la classe Square avec une taille et une position données en paramètres.
+        Initialise la classe Square avec une taille
+        et une position données en paramètres.
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -18,7 +20,8 @@ class Square:
             raise ValueError("size must be >= 0")
         if not isinstance(position, tuple) or len(position) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if not isinstance(position[0], int) or not isinstance(position[1], int) \
+        if not isinstance(position[0], int) \
+                or not isinstance(position[1], int) \
                 or position[0] < 0 or position[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__size = size
