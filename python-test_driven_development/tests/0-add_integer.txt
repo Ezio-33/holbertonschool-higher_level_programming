@@ -10,9 +10,13 @@
 >>> add_integer(100.3, -2)
 98
 >>> add_integer(2.5, 2.5)
+4
+>>> add_integer(0, 5)
 5
->>> add_integer(20, 0.2)
-20
+>>> add_integer(10**10, 10**10)
+20000000000
+>>> add_integer(-10**10, -10**10)
+-20000000000
 >>> add_integer("School", 4 )
 Traceback (most recent call last):
     ...
