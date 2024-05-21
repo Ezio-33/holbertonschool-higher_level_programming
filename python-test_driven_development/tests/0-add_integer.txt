@@ -5,6 +5,8 @@
 98
 >>> add_integer(2)
 100
+>>> add_integer(-2)
+96
 >>> add_integer(100.3, -2)
 98
 >>> add_integer("School", 4 )
