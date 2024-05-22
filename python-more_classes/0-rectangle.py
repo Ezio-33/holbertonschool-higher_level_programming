@@ -4,4 +4,4 @@
 
 class Rectangle:
 	"""Definit un rectangle"""
-    pass
+	pass
