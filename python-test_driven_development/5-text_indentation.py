@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def text_indentation(text):
     """
-    Imprime un texte avec deux nouvelles lignes après chaque caractère '.', '?' et ':'.
+    Imprime un texte avec deux nouvelles lignes
+    après chaque caractère '.', '?' et ':'.
 
     Paramètres:
     text (str): Le texte à formater.
