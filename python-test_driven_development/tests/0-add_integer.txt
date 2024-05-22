@@ -11,6 +11,8 @@
 96
 >>> add_integer(100.3, -2)
 98
+>>> add_integer(-2, 100.3)
+98
 >>> add_integer(2.5, 2.5)
 4
 >>> add_integer(0, 5)
@@ -29,6 +31,10 @@ TypeError: a must be an integer
 Traceback (most recent call last):
     ...
 TypeError: b must be an integer
+>>> add_integer("School", "School")
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
 >>> add_integer(None)
 Traceback (most recent call last):
     ...
@@ -41,8 +47,7 @@ TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 Traceback (most recent call last):
     ...
 TypeError: b must be an integer
-
-add_integer(float("nan"))
+>>> add_integer(float("nan"))
 Traceback (most recent call last):
     ...
 ValueError: cannot convert float NaN to integer
@@ -50,6 +55,6 @@ ValueError: cannot convert float NaN to integer
 Traceback (most recent call last):
     ...
 OverflowError: cannot convert float infinity to integer
-add_integer(100, None)
+>>> add_integer(100, None)
 Traceback (most recent call last):
 TypeError: b must be an integer
