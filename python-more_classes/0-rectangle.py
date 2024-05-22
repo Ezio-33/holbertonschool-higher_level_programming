@@ -3,5 +3,5 @@
 
 
 class Rectangle:
-	"""Definit un rectangle"""
-	pass
+    """Definit un rectangle"""
+    pass
