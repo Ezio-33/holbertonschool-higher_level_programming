@@ -1,6 +1,7 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 >>> text_indentation("Bonjour")
 Bonjour
+
 >>> text_indentation("Bonjour. Comment allez-vous ? Je vais bien : merci.")
 Bonjour.
 <BLANKLINE>
@@ -9,6 +10,7 @@ Comment allez-vous ?
 Je vais bien :
 <BLANKLINE>
 merci.
+
 >>> text_indentation(123)
 Traceback (most recent call last):
     ...
