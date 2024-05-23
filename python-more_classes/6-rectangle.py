@@ -11,7 +11,8 @@ class Rectangle:
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
-        """Initialise le rectangle avec une largeur et une hauteur optionnelles.
+        """Initialise le rectangle avec une
+        largeur et une hauteur optionnelles.
 
         Args:
             width (int): La largeur du rectangle. La valeur par défaut est 0.
@@ -103,8 +104,8 @@ class Rectangle:
         return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
-        """Affiche un message lors de la suppression d'une instance de Rectangle
-        et décrémente le compteur d'instances.
+        """Affiche un message lors de la suppression 
+        d'une instance de Rectangle et décrémente le compteur d'instances.
         """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
