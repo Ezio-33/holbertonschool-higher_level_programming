@@ -2,13 +2,14 @@
 """Définir une classe Rectangle avec des attributs privés
 et des méthodes pour calculer l'aire et le périmètre."""
 
+
 class Rectangle:
     """Définit un rectangle."""
 
     def __init__(self, width=0, height=0):
-        """Initialise le rectangle avec une 
+        """Initialise le rectangle avec une
         largeur et une hauteur optionnelles.
-        
+
         Args:
             width (int): La largeur du rectangle. La valeur par défaut est 0.
             height (int): La hauteur du rectangle. La valeur par défaut est 0.
@@ -24,10 +25,10 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """Définit la largeur du rectangle.
-        
+
         Args:
             value (int): La nouvelle largeur du rectangle.
-        
+
         Raises:
             TypeError: Si la largeur n'est pas un entier.
             ValueError: Si la largeur est inférieure à 0.
@@ -49,7 +50,7 @@ class Rectangle:
 
         Args:
             value (int): La nouvelle hauteur du rectangle.
-        
+
         Raises:
             TypeError: Si la hauteur n'est pas un entier.
             ValueError: Si la hauteur est inférieure à 0.
@@ -62,7 +63,7 @@ class Rectangle:
 
     def area(self):
         """Calcule et retourne l'aire du rectangle.
-        
+
         Returns:
             int: L'aire du rectangle.
         """
