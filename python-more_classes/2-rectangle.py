@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-"""Définir une classe Rectangle avec des attributs privés et des méthodes pour calculer l'aire et le périmètre."""
+"""Définir une classe Rectangle avec des attributs privés
+et des méthodes pour calculer l'aire et le périmètre."""
 
 class Rectangle:
     """Définit un rectangle."""
 
     def __init__(self, width=0, height=0):
-        """Initialise le rectangle avec une largeur et une hauteur optionnelles.
+        """Initialise le rectangle avec une 
+        largeur et une hauteur optionnelles.
         
         Args:
             width (int): La largeur du rectangle. La valeur par défaut est 0.
@@ -44,7 +46,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """Définit la hauteur du rectangle.
-        
+
         Args:
             value (int): La nouvelle hauteur du rectangle.
         
@@ -68,9 +70,10 @@ class Rectangle:
 
     def perimeter(self):
         """Calcule et retourne le périmètre du rectangle.
-        
+
         Returns:
-            int: Le périmètre du rectangle, ou 0 si l'une des dimensions est 0.
+            int: Le périmètre du rectangle,
+            ou 0 si l'une des dimensions est 0.
         """
         if self.width == 0 or self.height == 0:
             return 0
