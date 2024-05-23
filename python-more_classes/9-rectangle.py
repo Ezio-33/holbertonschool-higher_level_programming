@@ -147,7 +147,7 @@ class Rectangle:
             La valeur par défaut est 0.
 
         Returns:
-            Rectangle: Une nouvelle instance de 
+            Rectangle: Une nouvelle instance de
             Rectangle avec largeur et hauteur égales à size.
         """
         return cls(size, size)
