@@ -104,7 +104,7 @@ class Rectangle:
         return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
-        """Affiche un message lors de la suppression 
+        """Affiche un message lors de la suppression
         d'une instance de Rectangle et décrémente le compteur d'instances.
         """
         print("Bye rectangle...")
