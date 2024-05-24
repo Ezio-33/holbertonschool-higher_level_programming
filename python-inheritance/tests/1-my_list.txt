@@ -1,0 +1,48 @@
+"""
+Définit une classe MyList qui hérite de list
+"""
+
+>>> MyList = __import__('1-my_list').MyList
+
+# Créer une instance de MyList
+>>> my_list = MyList()
+
+# Ajouter des éléments à la liste
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+
+# Imprimer la liste non triée
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+# Imprimer la liste triée
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+# Vérifier que la liste d'origine n'a pas été modifiée
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+# Tests supplémentaires pour vérifier le comportement avec des listes vides et des listes déjà triées
+
+# Liste vide
+>>> empty_list = MyList()
+>>> empty_list.print_sorted()
+[]
+
+# Liste déjà triée
+>>> sorted_list = MyList([1, 2, 3, 4, 5])
+>>> sorted_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(sorted_list)
+[1, 2, 3, 4, 5]
+
+# Liste avec des éléments identiques
+>>> identical_list = MyList([2, 2, 2, 2])
+>>> identical_list.print_sorted()
+[2, 2, 2, 2]
+>>> print(identical_list)
+[2, 2, 2, 2]
