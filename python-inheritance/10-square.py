@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Définit une classe Square qui hérite de Rectangle (9-rectangle.py)."""
+"""Définit une classe Square qui
+hérite de Rectangle (9-rectangle.py)."""
 Rectangle = __import__('9-rectangle').Rectangle
 
 
@@ -31,6 +32,7 @@ class Square(Rectangle):
         Retourne une représentation en chaîne de caractères de l'objet Square.
 
         Returns:
-            str: La description du carré sous la forme [Rectangle] <size>/<size>.
+            str: La description du carré sous la
+            forme [Rectangle] <size>/<size>.
         """
         return f"[Rectangle] {self.__size}/{self.__size}"
