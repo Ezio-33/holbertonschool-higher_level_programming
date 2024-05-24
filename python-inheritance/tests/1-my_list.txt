@@ -4,33 +4,55 @@ Définit une classe MyList qui hérite de list
 
 >>> MyList = __import__('1-my_list').MyList
 
-# Créer une instance de MyList
->>> my_list = MyList()
+Test for success
+================
 
-# Ajouter des éléments à la liste
+# Créer une instance de MyList et ajouter des éléments positifs
+>>> my_list = MyList()
 >>> my_list.append(1)
 >>> my_list.append(4)
 >>> my_list.append(2)
 >>> my_list.append(3)
 >>> my_list.append(5)
-
-# Imprimer la liste non triée
 >>> print(my_list)
 [1, 4, 2, 3, 5]
-
-# Imprimer la liste triée
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
-
-# Vérifier que la liste d'origine n'a pas été modifiée
 >>> print(my_list)
 [1, 4, 2, 3, 5]
 
-# Tests supplémentaires pour vérifier le comportement avec des listes vides et des listes déjà triées
+# Créer une instance de MyList et ajouter des éléments négatifs
+>>> my_list = MyList()
+>>> my_list.append(-1)
+>>> my_list.append(-4)
+>>> my_list.append(-2)
+>>> my_list.append(-3)
+>>> my_list.append(-5)
+>>> print(my_list)
+[-1, -4, -2, -3, -5]
+>>> my_list.print_sorted()
+[-5, -4, -3, -2, -1]
+>>> print(my_list)
+[-1, -4, -2, -3, -5]
 
-# Liste vide
->>> empty_list = MyList()
->>> empty_list.print_sorted()
+# Créer une instance de MyList et ajouter des chaînes de caractères
+>>> my_list = MyList()
+>>> my_list.append("baguette")
+>>> my_list.append("fromage")
+>>> print(my_list)
+['baguette', 'fromage']
+>>> my_list.print_sorted()
+['baguette', 'fromage']
+>>> print(my_list)
+['baguette', 'fromage']
+
+# Créer une instance de MyList vide
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
+[]
+>>> print(my_list)
 []
 
 # Liste déjà triée
