@@ -1,26 +1,40 @@
+doctest for 5-text_indentation.py
+============================
+function that prints a text with 2 new lines after each of these characters: ., ? and :
+
 >>> text_indentation = __import__('5-text_indentation').text_indentation
->>> text_indentation("Bonjour")
-Bonjour
 
->>> text_indentation("Bonjour. Comment allez-vous ? Je vais bien : merci.")
-Bonjour.
-<BLANKLINE>
-Comment allez-vous ?
-<BLANKLINE>
-Je vais bien :
-<BLANKLINE>
-merci.
+Test for success
+================
 
->>> text_indentation(123)
-Traceback (most recent call last):
-    ...
-TypeError: text must be a string
->>> text_indentation()
-Traceback (most recent call last):
-TypeError: text_indentation() missing 1 required positional argument: 'text'
->>> text_indentation("toto", 2)
-Traceback (most recent call last):
-TypeError: text_indentation() takes 1 positional argument but 2 were given
+>>> text_indentation("Nonuni")
+Nonuni
+
+>>> text_indentation("Test: hey?...nice")
+Test:
+<BLANKLINE>
+hey?
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+nice
+
+================
+Test for fail
+================
+
 >>> text_indentation(2)
 Traceback (most recent call last):
 TypeError: text must be a string
+
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> text_indentation("spaceship", 2)
+Traceback (most recent call last):
+TypeError: text_indentation() takes 1 positional argument but 2 were given
