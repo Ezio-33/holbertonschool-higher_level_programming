@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 import json
 
+
 def from_json_string(my_str):
     """
-    Retourne un objet (structure de données Python) représenté par une chaîne JSON.
+    Retourne un objet (structure de données Python)
+    représenté par une chaîne JSON.
 
     Args:
         my_str (str): La chaîne JSON à convertir.
