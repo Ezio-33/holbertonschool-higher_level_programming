@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Fonction pour écrire un objet dans un fichier
+texte en utilisant une représentation JSON."""
 import json
 
 

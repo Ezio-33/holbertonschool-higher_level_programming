@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Fonction pour convertir un objet en dictionnaire."""
 def class_to_json(obj):
     """
     Retourne la description d'un objet sous forme de

@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module pour la classe Student."""
 class Student:
     """
     Classe qui définit un étudiant avec des attributs publics.

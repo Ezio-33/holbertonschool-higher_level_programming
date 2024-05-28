@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Fonction pour convertir une chaîne JSON en objet Python."""
 import json
 
 

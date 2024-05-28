@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-""" My class module
-"""
+"""Module pour la classe MyClass."""
 
 
 class MyClass:
-    """ My class
-    """
+    """ My class"""
 
     score = 0
 
