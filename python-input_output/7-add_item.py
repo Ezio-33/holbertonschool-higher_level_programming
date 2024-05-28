@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""fonction pour ajouter des arguments
+de ligne de commande à un fichier JSON."""
 import sys
 import os
 

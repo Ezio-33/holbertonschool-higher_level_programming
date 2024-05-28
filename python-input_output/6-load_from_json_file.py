@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""fonction pour charger un fichier JSON."""
 import json
 
 
