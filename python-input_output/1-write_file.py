@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Fonction pour écrire dans un fichier texte."""
+
+
 def write_file(filename="", text=""):
     """
     Écrit une chaîne de caractères dans un fichier texte (UTF8)
