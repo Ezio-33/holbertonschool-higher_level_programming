@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Fonction pour lire un fichier texte."""
+
+
 def read_file(filename=""):
     """
     Lit un fichier texte (UTF8) et affiche son contenu sur stdout.

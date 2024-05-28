@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Fonction pour ajouter une chaîne de caractères à un fichier texte."""
+
+
 def append_write(filename="", text=""):
     """
     Ajoute une chaîne de caractères à la fin d'un fichier texte (UTF8)
