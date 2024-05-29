@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-
-
 """Sérialise et charge des données à partir d'un fichier JSON."""
 import json
+
 
 def serialize_and_save_to_file(data, filename):
     """
@@ -15,9 +14,11 @@ def serialize_and_save_to_file(data, filename):
     with open(filename, 'w') as file:
         json.dump(data, file, indent=4)
 
+
 def load_and_deserialize(filename):
     """
-    Charge un fichier JSON et désérialise son contenu en un dictionnaire Python.
+    Charge un fichier JSON et désérialise son contenu
+    en un dictionnaire Python.
 
     :param filename: Nom du fichier JSON d'entrée
     :return: Dictionnaire Python désérialisé
