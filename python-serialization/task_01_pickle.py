@@ -50,6 +50,6 @@ class CustomObject:
         try:
             with open(filename, 'rb') as file:
                 return pickle.load(file)
-        except (FileNotFoundError, pickle.UnpicklingError) as e:
+        except (FileNotFoundError, Exception) as e:
             print(f"Erreur lors de la désérialisation : {e}")
             return None
