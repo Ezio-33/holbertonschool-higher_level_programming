@@ -15,6 +15,10 @@
 - [Using cURL to interact with HTTP APIs](https://www.baeldung.com/curl-rest)
 - [Public API to play with: JSONPlaceholder](https://jsonplaceholder.typicode.com/)
 
+## Utilité de `curl`
+
+`curl` est un outil en ligne de commande qui permet de transférer des données vers ou depuis un serveur réseau en utilisant divers protocoles, notamment HTTP et HTTPS. Il est très utile pour tester et déboguer des API RESTful.
+
 ## Installation et Interaction de Base avec `curl`
 
 ### Installation de `curl`
@@ -142,3 +146,21 @@ Cette commande enverra les données spécifiées à l'API et vous devriez recevo
    ```bash
    curl -X POST -d "title=foo&body=bar&userId=1" https://jsonplaceholder.typicode.com/posts
    ```
+
+## Interprétation des résultats des requêtes API
+
+### En-têtes de réponse :
+
+- Les en-têtes contiennent des informations sur la réponse. Par exemple :
+- Content-Type: Indique le type de données retournées (par exemple, application/json pour des données JSON).
+- Content-Length: Indique la longueur du contenu en octets.
+- Cache-Control: Indique les directives de cache.
+- Codes de statut HTTP :
+
+### Les codes de statut indiquent le résultat de la requête. Voici quelques codes courants :
+
+- 200 OK: La requête a réussi.
+- 201 Created: Une nouvelle ressource a été créée avec succès.
+- 400 Bad Request: La requête est mal formée.
+- 404 Not Found: La ressource demandée est introuvable.
+- 500 Internal Server Error: Une erreur s'est produite sur le serveur.
