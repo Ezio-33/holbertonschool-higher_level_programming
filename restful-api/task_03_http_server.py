@@ -6,7 +6,7 @@ import json
 PORT = 8000
 
 
-class Http_Requet(http.server.BaseHTTPRequestHandler):
+class HttpRequestHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/':
             self.send_response(200)
@@ -41,6 +41,6 @@ class Http_Requet(http.server.BaseHTTPRequestHandler):
 
 
 """Configuration et démarrage du serveur"""
-with socketserver.TCPServer(("", PORT), Http_Requet) as httpd:
+with socketserver.TCPServer(("", PORT), HttpRequestHandler) as httpd:
     print(f"Serving on port {PORT}")
     httpd.serve_forever()
