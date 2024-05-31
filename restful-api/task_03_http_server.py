@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-import http.server
-import socketserver
+from http.server import HTTPServer, BaseHTTPRequestHandler
 import json
 
-PORT = 8000
 
 
-class HttpRequestHandler(http.server.BaseHTTPRequestHandler):
+
+class HttpRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/':
             self.send_response(200)
@@ -37,6 +36,5 @@ class HttpRequestHandler(http.server.BaseHTTPRequestHandler):
 
 
 """Configuration et démarrage du serveur"""
-with socketserver.TCPServer(("", PORT), HttpRequestHandler) as httpd:
-    print(f"Serving on port {PORT}")
-    httpd.serve_forever()
+httpd = HTTPServer(('', 8000), HttpRequestHandler)
+httpd.serve_forever()
