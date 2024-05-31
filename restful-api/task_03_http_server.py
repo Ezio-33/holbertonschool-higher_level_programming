@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-from http.server import HTTPServer, BaseHTTPRequestHandler
+import http.server
+import socketserver
 import json
 
+PORT = 8000
 
-class HttpRequestHandler(BaseHTTPRequestHandler):
+
+class HttpRequestHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/':
             self.send_response(200)
@@ -18,21 +21,26 @@ class HttpRequestHandler(BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(data).encode('utf-8'))
         elif self.path == '/status':
             self.send_response(200)
-            self.send_header('Content-type', 'text/plain')
+            self.send_header('Content-type', 'application/json')
             self.end_headers()
-            self.wfile.write(b"OK")
+            status = {"status": "OK"}
+            self.wfile.write(json.dumps(status).encode('utf-8'))
         elif self.path == '/info':
             self.send_response(200)
-            self.send_header('Content-type', 'text/plain')
+            self.send_header('Content-type', 'application/json')
             self.end_headers()
-            self.wfile.write(b'{"version": "1.0", "description": "A simple API built with http.server"}')
+            info = {"version": "1.0", "description":
+                    "A simple API built with http.server"}
+            self.wfile.write(json.dumps(info).encode('utf-8'))
         else:
             self.send_response(404)
-            self.send_header('Content-type', 'text/plain')
+            self.send_header('Content-type', 'application/json')
             self.end_headers()
-            self.wfile.write(b"404 Not Found")
+            error_message = {"404 Not Found"}
+            self.wfile.write(json.dumps(error_message).encode('utf-8'))
 
 
 """Configuration et démarrage du serveur"""
-httpd = HTTPServer(('', 8000), HttpRequestHandler)
-httpd.serve_forever()
+with socketserver.TCPServer(("", PORT), HttpRequestHandler) as httpd:
+    print(f"Serving on port {PORT}")
+    httpd.serve_forever()
