@@ -164,3 +164,29 @@ Cette commande enverra les données spécifiées à l'API et vous devriez recevo
 - 400 Bad Request: La requête est mal formée.
 - 404 Not Found: La ressource demandée est introuvable.
 - 500 Internal Server Error: Une erreur s'est produite sur le serveur.
+
+## Test avec curl sur un serveur local
+
+### Racine (/) :
+
+```bash
+curl http://localhost:8000
+```
+
+### Endpoint /data :
+
+```bash
+curl http://localhost:8000/data
+```
+
+### Endpoint /status :
+
+```bash
+curl http://localhost:8000/status
+```
+
+### Endpoint Inconnu :
+
+```bash
+curl http://localhost:8000/unknown
+```
