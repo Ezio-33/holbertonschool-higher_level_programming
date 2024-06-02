@@ -1,19 +1,20 @@
 #!/usr/bin/python3
 from flask import Flask, jsonify, request
 
-""" Crée une instance de l'application Flask"""
+
+
 app = Flask(__name__)
 
-""" Initialise un dictionnaire vide pour stocker les utilisateurs"""
 users = {}
 
 
 @app.route("/")
 def home():
     """
-    Cette fonction gère la route racine de l'API Flask.
-    Return:
-            str: Un message de bienvenue pour l'API Flask.
+    This function handles the root route of the Flask API.
+
+    Returns:
+            str: A welcome message for the Flask API.
     """
     return "Welcome to the Flask API!"
 
@@ -21,10 +22,11 @@ def home():
 @app.route("/data")
 def data():
     """
-    Récupère une liste de noms d'utilisateur du dictionnaire 'users'
-    et la retourne sous forme de réponse JSON.
-    Return:
-            Une réponse JSON contenant une liste de noms d'utilisateur.
+    Retrieve a list of usernames from the 'users'
+    dictionary and return it as a JSON response.
+
+    Returns:
+            A JSON response containing a list of usernames.
     """
     return jsonify(list(users.keys()))
 
@@ -32,9 +34,10 @@ def data():
 @app.route("/status")
 def status():
     """
-    Retourne le statut de l'API.
-    Return:
-            str: Le message de statut "OK".
+    Returns the status of the API.
+
+    Returns:
+            str: The status message "OK".
     """
     return "OK"
 
@@ -42,16 +45,16 @@ def status():
 @app.route("/users/<username>")
 def user(username):
     """
-    Récupère les informations de l'utilisateur
-    basé sur le nom d'utilisateur fourni.
+    Retrieve user information based on the provided username.
+
     Args:
-            username: Le nom d'utilisateur de l'utilisateur
-            pour lequel récupérer les informations.
-    Return:
-            Si l'utilisateur est trouvé, les informations de l'utilisateur
-            sont retournées sous forme de réponse JSON.
-            Si l'utilisateur n'est pas trouvé, une réponse JSON avec un
-            message d'erreur et un code de statut 404 est retournée.
+            username: The username of the user to retrieve information for.
+
+    Returns:
+            If the user is found, the user information
+            is returned as a JSON response.
+            If the user is not found, a JSON response with an
+            error message and a 404 status code is returned.
     """
     user = users.get(username)
     if user:
@@ -63,16 +66,16 @@ def user(username):
 @app.route("/add_user", methods=["POST"])
 def add_user():
     """
-    Ajoute un nouvel utilisateur au système.
-    Return:
-            Une réponse JSON avec la structure suivante:
-            - Si les données JSON sont invalides:
-            {"error": "Invalid JSON data"}
-            - Si le nom d'utilisateur existe déjà:
+    Add a new user to the system.
+
+    Returns:
+            A JSON response with the following structure:
+            - If the JSON data is invalid: {"error": "Invalid JSON data"}
+            - If the username already exists:
             {"error": "Username already exists"}
-            - Si l'utilisateur est ajouté avec succès:
+            - If the user is successfully added:
             {"message": "User added", "user": <user_data>}
-            - Si une exception se produit: {"error": <exception_message>}
+            - If an exception occurs: {"error": <exception_message>}
     """
     new_user = request.get_json()
     username = new_user.get("username")
@@ -84,6 +87,5 @@ def add_user():
     return jsonify({"message": "User added", "user": users[username]}), 201
 
 
-""" Démarre le serveur Flask lorsque le script est exécuté directement"""
 if __name__ == "__main__":
     app.run()
