@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
-import http.server
-import socketserver
+from http.server import HTTPServer, BaseHTTPRequestHandler
 import json
 
-PORT = 8000
 
-
-class HttpRequestHandler(http.server.BaseHTTPRequestHandler):
+class HttpRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/':
             self.send_response(200)
@@ -21,26 +18,21 @@ class HttpRequestHandler(http.server.BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(data).encode('utf-8'))
         elif self.path == '/status':
             self.send_response(200)
-            self.send_header('Content-type', 'application/json')
+            self.send_header('Content-type', 'text/plain')
             self.end_headers()
-            status = {"status": "OK"}
-            self.wfile.write(json.dumps(status).encode('utf-8'))
+            self.wfile.write(b"OK")
         elif self.path == '/info':
             self.send_response(200)
-            self.send_header('Content-type', 'application/json')
+            self.send_header('Content-type', 'text/plain')
             self.end_headers()
-            info = {"version": "1.0", "description":
-                    "A simple API built with http.server"}
-            self.wfile.write(json.dumps(info).encode('utf-8'))
+            self.wfile.write(b'{"version": "1.0", "description": "A simple API built with http.server"}')
         else:
             self.send_response(404)
-            self.send_header('Content-type', 'application/json')
+            self.send_header('Content-type', 'text/plain')
             self.end_headers()
-            error_message = {"404 Not Found"}
-            self.wfile.write(json.dumps(error_message).encode('utf-8'))
+            self.wfile.write(b"404 Not Found")
 
 
 """Configuration et démarrage du serveur"""
-with socketserver.TCPServer(("", PORT), HttpRequestHandler) as httpd:
-    print(f"Serving on port {PORT}")
-    httpd.serve_forever()
+httpd = HTTPServer(('', 8000), HttpRequestHandler)
+httpd.serve_forever()
