@@ -1,6 +1,24 @@
-**SQL - Introduction**
+# SQL - Introduction
 
-### Ressources à lire regarder :\*\*
+## Objectifs d'apprentissage
+
+À la fin de ce projet, vous devriez être capable d'expliquer à n'importe qui, sans l'aide de Google :
+
+**Général :**
+
+- Qu'est-ce qu'une base de données
+- Qu'est-ce qu'une base de données relationnelle
+- Que signifie SQL
+- Qu'est-ce que MySQL
+- Comment créer une base de données dans MySQL
+- Que signifient DDL et DML
+- Comment créer ou modifier une table
+- Comment sélectionner des données à partir d'une table
+- Comment insérer, mettre à jour ou supprimer des données
+- Qu'est-ce que les sous-requêtes
+- Comment utiliser les fonctions MySQL
+
+## Ressources à consulter
 
 - [Qu'est-ce qu'une base de données et SQL ?](https://www.youtube.com/watch?v=FR4QIeZaPeM)
 - [Installer MySQL (Serveur MySQL)](https://www.youtube.com/watch?v=9h3ctGFTz9w)
@@ -13,11 +31,11 @@
 - [Cheat Sheet MySQL](https://intellipaat.com/mediaFiles/2019/02/SQL-Commands-Cheat-Sheet.pdf?US)
 - [Syntaxe des instructions SQL MySQL 8.0](https://dev.mysql.com/doc/refman/8.0/en/sql-statements.html)
 
-### Liens supplémentaires
+## Liens supplémentaires
 
 - [Tutoriel MySQL en français](https://sql.sh/)
 
-### Exigences
+## Exigences
 
 **Général :**
 
@@ -30,7 +48,7 @@
 - Un fichier `README.md`, à la racine du dossier du projet, est obligatoire
 - La longueur de vos fichiers sera testée en utilisant `wc`
 
-### Informations supplémentaires
+## Informations supplémentaires
 
 **Commentaires pour votre fichier SQL :**
 
