@@ -11,16 +11,16 @@ Ce projet couvre des requêtes SQL plus avancées, y compris la création d'util
 - [Comment créer un nouvel utilisateur et lui accorder des permissions dans MySQL - FR](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql-fr)
 - [Comment utiliser l'instruction MySQL GRANT pour accorder des privilèges à un utilisateur ?- EN](https://www.mysqltutorial.org/mysql-administration/mysql-grant/)
 - [Contraintes MySQL-EN](https://zetcode.com/mysql/constraints/)
-- [Technique SQL : sous-requêtes-EN]](https://web.csulb.edu/colleges/coe/cecs/dbdesign/dbdesign.php?page=sql/subqueries.php)
-- [Opération d'interrogation de base : la jointure-EN]](https://web.csulb.edu/colleges/coe/cecs/dbdesign/dbdesign.php?page=sql/join.php)
-- [Technique SQL : jointures multiples et mot-clé distinct-EN]](https://web.csulb.edu/colleges/coe/cecs/dbdesign/dbdesign.php?page=sql/multijoin.php)
-- [Technique SQL : types de jointures-EN]](https://web.csulb.edu/colleges/coe/cecs/dbdesign/dbdesign.php?page=sql/jointypes.php)
-- [Technique SQL : l'union et la soustraction-EN]](https://web.csulb.edu/colleges/coe/cecs/dbdesign/dbdesign.php?page=sql/setops.php)
-- [Fiche d'information sur MySQL-EN]](https://intellipaat.com/mediaFiles/2019/02/SQL-Commands-Cheat-Sheet.pdf?US)
-- [Les sept types de jointures SQL-EN]](https://tableplus.com/blog/2018/09/a-beginners-guide-to-seven-types-of-sql-joins.html)
-- [Tutoriel MySQLl-EN]](https://www.youtube.com/watch?v=yPu6qV5byu4)
+- [Technique SQL : sous-requêtes-EN](https://web.csulb.edu/colleges/coe/cecs/dbdesign/dbdesign.php?page=sql/subqueries.php)
+- [Opération d'interrogation de base : la jointure-EN](https://web.csulb.edu/colleges/coe/cecs/dbdesign/dbdesign.php?page=sql/join.php)
+- [Technique SQL : jointures multiples et mot-clé distinct-EN](https://web.csulb.edu/colleges/coe/cecs/dbdesign/dbdesign.php?page=sql/multijoin.php)
+- [Technique SQL : types de jointures-EN](https://web.csulb.edu/colleges/coe/cecs/dbdesign/dbdesign.php?page=sql/jointypes.php)
+- [Technique SQL : l'union et la soustraction-EN](https://web.csulb.edu/colleges/coe/cecs/dbdesign/dbdesign.php?page=sql/setops.php)
+- [Fiche d'information sur MySQL-EN](https://intellipaat.com/mediaFiles/2019/02/SQL-Commands-Cheat-Sheet.pdf?US)
+- [Les sept types de jointures SQL-EN](https://tableplus.com/blog/2018/09/a-beginners-guide-to-seven-types-of-sql-joins.html)
+- [Tutoriel MySQLl-EN](https://www.youtube.com/watch?v=yPu6qV5byu4)
 - [Guide de style SQL - FR](https://www.sqlstyle.guide/fr/)
-- [Syntaxe des instructions SQL de MySQL 8.0-EN]](https://dev.mysql.com/doc/refman/8.0/en/sql-statements.html)
+- [Syntaxe des instructions SQL de MySQL 8.0-EN](https://dev.mysql.com/doc/refman/8.0/en/sql-statements.html)
 
 **Ressources supplémentaires sur la conception de modèles de bases de données relationnelles :**
 
@@ -67,8 +67,6 @@ $ cat my_script.sql
 SELECT id, name FROM students WHERE batch_id = 3 ORDER BY created_at DESC LIMIT 3;
 $
 ```
-
-````
 
 **Installer MySQL 8.0 sur Ubuntu 20.04 LTS :**
 
@@ -144,4 +142,3 @@ id  name
 8   Thriller
 $
 ```
-````
