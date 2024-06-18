@@ -144,7 +144,3 @@ id  name
 8   Thriller
 $
 ```
-
-```
-
-```
