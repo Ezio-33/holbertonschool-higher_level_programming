@@ -1,4 +1,3 @@
-````markdown
 # SQL - More queries
 
 ## Description
@@ -68,6 +67,7 @@ $ cat my_script.sql
 SELECT id, name FROM students WHERE batch_id = 3 ORDER BY created_at DESC LIMIT 3;
 $
 ```
+
 ````
 
 **Installer MySQL 8.0 sur Ubuntu 20.04 LTS :**
@@ -144,3 +144,4 @@ id  name
 8   Thriller
 $
 ```
+````
