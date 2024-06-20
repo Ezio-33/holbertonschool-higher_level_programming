@@ -8,10 +8,10 @@ username (str): Le nom d'utilisateur pour la base de données MySQL.
 password (str): Le mot de passe de la base de données MySQL.
 database (str): Le nom de la base de données MySQL.
 """
+import sys
+import MySQLdb
 
 if __name__ == "__main__":
-    import sys
-    import MySQLdb
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
