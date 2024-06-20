@@ -1,18 +1,17 @@
 #!/usr/bin/python3
 """
-Se connecte à une base de données MySQL et
+Se connecte à une base de données MySQL et 
 sélectionne tous les états de la table "states".
 
-Args :
-    nom_utilisateur (str) : Le nom d'utilisateur de la base de données MySQL.
-    mdp (str) : Le mot de passe de la base de données MySQL.
-    database (str) : Le nom de la base de données.
+Args:
+username (str): Le nom d'utilisateur pour la base de données MySQL.
+password (str): Le mot de passe de la base de données MySQL.
+database (str): Le nom de la base de données MySQL.
 """
 
-import sys
-import MySQLdb
-
 if __name__ == "__main__":
+    import sys
+    import MySQLdb
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
