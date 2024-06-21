@@ -12,15 +12,15 @@ Args :
 if __name__ == "__main__":
     import sys
     import MySQLdb
-    username = sys.argv[1]
-    password = sys.argv[2]
+    nom_utilisateur = sys.argv[1]
+    mdp = sys.argv[2]
     database = sys.argv[3]
 
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user=username,
-        passwd=password,
+        user=nom_utilisateur,
+        passwd=mdp,
         db=database
     )
 
