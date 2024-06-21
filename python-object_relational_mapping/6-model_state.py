@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Start link class to table in database
+Démarrer le lien entre la classe et le
+tableau dans la base de données
 """
 import sys
 from sqlalchemy import create_engine
