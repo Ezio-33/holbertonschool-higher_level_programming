@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 """
 Se connecte à une base de données MySQL et
-sélectionne tous les états dont le nom commence par 'N' de la table "states".
+sélectionne tous les états dont le nom commence
+par 'N' de la table "states".
 
 Args :
-    nom_utilisateur (str) : Le nom d'utilisateur de la base de données MySQL.
+    nom_utilisateur (str) : Le nom d'utilisateur de la base de
+    données MySQL.
     mdp (str) : Le mot de passe de la base de données MySQL.
     database (str) : Le nom de la base de données.
 """
