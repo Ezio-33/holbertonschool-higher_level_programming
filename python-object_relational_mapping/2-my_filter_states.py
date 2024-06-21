@@ -11,10 +11,10 @@ Args :
     nom_etat (str) : Le nom de l'état à rechercher.
 """
 
-import sys
-import MySQLdb
 
 if __name__ == "__main__":
+    import sys
+    import MySQLdb
     nom_utilisateur = sys.argv[1]
     mdp = sys.argv[2]
     database = sys.argv[3]
