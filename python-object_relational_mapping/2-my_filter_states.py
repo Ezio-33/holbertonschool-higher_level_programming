@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
 Se connecte à une base de données MySQL et
-affiche toutes les valeurs de la table "states" où le nom correspond à l'argument fourni.
+affiche toutes les valeurs de la table "states"
+où le nom correspond à l'argument fourni.
 
 Args :
     nom_utilisateur (str) : Le nom d'utilisateur de la base de données MySQL.
@@ -29,9 +30,9 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
     select = """SELECT * FROM states WHERE name = '{}'
-			ORDER BY id ASC""".format(nom_etat)
+            ORDER BY id ASC""".format(nom_etat)
     cursor.execute(select)
-    
+
     states = cursor.fetchall()
 
     for state in states:

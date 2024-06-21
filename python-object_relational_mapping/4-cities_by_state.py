@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
 Se connecte à une base de données MySQL et
-liste toutes les villes de la table "cities" de la base de données "hbtn_0e_4_usa".
+liste toutes les villes de la table "cities"
+de la base de données "hbtn_0e_4_usa".
 
 Args :
     nom_utilisateur (str) : Le nom d'utilisateur de la base de données MySQL.
@@ -27,13 +28,13 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
     query = """
-    SELECT cities.id, cities.name, states.name 
-    FROM cities 
-    JOIN states ON cities.state_id = states.id 
+    SELECT cities.id, cities.name, states.name
+    FROM cities
+    JOIN states ON cities.state_id = states.id
     ORDER BY cities.id ASC
     """
     cursor.execute(query)
-    
+
     cities = cursor.fetchall()
 
     for city in cities:
