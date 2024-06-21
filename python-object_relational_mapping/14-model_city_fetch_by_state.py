@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         nom_utilisateur, mdp, database), pool_pre_ping=True)
-    
+
     Session = sessionmaker(bind=engine)
     session = Session()
 

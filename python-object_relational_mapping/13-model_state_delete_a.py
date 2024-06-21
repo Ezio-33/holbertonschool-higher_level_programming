@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Supprime tous les objets State dont le nom contient la lettre 'a' de la base de données hbtn_0e_6_usa.
+Supprime tous les objets State dont le nom contient
+la lettre 'a' de la base de données hbtn_0e_6_usa.
 """
 
 import sys
@@ -15,11 +16,12 @@ if __name__ == "__main__":
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         nom_utilisateur, mdp, database), pool_pre_ping=True)
-    
+
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states_to_delete = session.query(State).filter(State.name.like('%a%')).all()
+    states_to_delete = session.query(State).filter(State.name.like('%a%')) \
+        .all()
     for state in states_to_delete:
         session.delete(state)
     session.commit()

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Affiche l'objet State dont le nom est passé en argument de la base de données hbtn_0e_6_usa.
+Affiche l'objet State dont le nom est passé en argument
+de la base de données hbtn_0e_6_usa.
 """
 
 import sys

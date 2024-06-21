@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Modifie le nom de l'objet State dont l'ID est 2 en 
+Modifie le nom de l'objet State dont l'ID est 2 en
 "New Mexico" dans la base de données hbtn_0e_6_usa.
 """
 

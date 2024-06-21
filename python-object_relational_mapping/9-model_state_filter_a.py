@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Liste tous les objets State qui contiennent la lettre 'a' de la base de données hbtn_0e_6_usa.
+Liste tous les objets State qui contiennent la lettre 'a' de
+la base de données hbtn_0e_6_usa.
 """
 
 import sys
@@ -19,7 +20,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states_with_a = session.query(State).filter(State.name.like('%a%')).order_by(State.id).all()
+    states_with_a = session.query(State).filter(State.name.like('%a%')) \
+        .order_by(State.id).all()
     for state in states_with_a:
         print(f"{state.id}: {state.name}")
 
