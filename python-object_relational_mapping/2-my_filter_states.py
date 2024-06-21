@@ -1,16 +1,12 @@
 #!/usr/bin/python3
 """
-Se connecte à une base de données MySQL et
-affiche toutes les valeurs de la table "states"
-où le nom correspond à l'argument fourni.
-
-Args :
-username (str): Le nom d'utilisateur pour la base de données MySQL.
-password (str): Le mot de passe de la base de données MySQL.
-database (str): Le nom de la base de données MySQL.
+Write a script that takes in an argument and displays all values
+in the states table of hbtn_0e_0_usa where name matches the argument.
+Args:
+username (str): The username for the MySQL database.
+password (str): The password for the MySQL database.
+database (str): The name of the MySQL database.
 """
-
-
 if __name__ == "__main__":
     import sys
     import MySQLdb
